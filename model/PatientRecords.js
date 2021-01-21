@@ -11,12 +11,12 @@ class PatientRecords {
 
     static async save(record) {
         const result = await patientRecordsCollection().insertOne(record);
-        return createFrontEndUser(result.ops[0]);
+        return result.ops[0];
     }
 
     static async findByUserId(id) {
         const userId = ObjectId(id);
-        const records = await patientRecordsCollection().find({ _id: userId }).toArray();
+        const records = await patientRecordsCollection().find({ userId: userId }).toArray();
         return records;
     }
 
