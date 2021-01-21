@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 
 const { initDatabase } = require("./utlis/DB");
 const userRouter = require("./routes/userRoutes");
+const petientRouter = require("./routes/patientsRoutes");
 
 const corsOptions = {
     //   origin: ["http://localhost:3000"],
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // routes
 app.use("/api/users", userRouter);
+app.use("/api/petients", petientRouter);
 
 appStartUp();
 

@@ -25,3 +25,7 @@ module.exports.getDatabase = () => {
 module.exports.usersCollection = () => {
     return this.getDatabase().collection("users");
 };
+
+module.exports.patientRecordsCollection = () => {
+    return this.getDatabase().collection("patient-records");
+};
