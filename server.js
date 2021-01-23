@@ -10,7 +10,7 @@ const userRouter = require("./routes/userRoutes");
 const petientRouter = require("./routes/patientsRoutes");
 
 const corsOptions = {
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://heartwaves.netlify.app"],
     credentials: true,
 };
 
